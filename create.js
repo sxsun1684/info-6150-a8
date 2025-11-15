@@ -14,12 +14,17 @@ form.addEventListener("submit", async (event) => {
     const description = form.elements["description"].value.trim();
     const avatar = form.elements["avatar"].value.trim();
     const genre = form.elements["genre"].value.trim();
+    // const currentYear = new Date().getFullYear();
 
     if (!title || !creator || !year || !rating || !director || !seasons || !actorRaw) {
         alert("Please fill in all fields.");
         return;
     }
-
+    const currentYear = new Date().getFullYear();
+    if (year > currentYear) {
+        alert(`Year cannot be greater than ${currentYear}.`);
+        return;
+    }
     const actor = actorRaw
         .split(",")
         .map((name) => name.trim())
