@@ -12,7 +12,8 @@ form.addEventListener("submit", async (event) => {
     const seasons = Number(form.elements["seasons"].value);
     const actorRaw = form.elements["actor"].value.trim();
     const description = form.elements["description"].value.trim();
-    const avatar = form.elements["avatar"].value.trim()
+    const avatar = form.elements["avatar"].value.trim();
+    const genre = form.elements["genre"].value.trim();
 
     if (!title || !creator || !year || !rating || !director || !seasons || !actorRaw) {
         alert("Please fill in all fields.");
@@ -31,7 +32,8 @@ form.addEventListener("submit", async (event) => {
         rating,
         director,
         seasons,
-        actor: actorRaw.split(",").map(x => x.trim()),
+        actor,
+        genre,
         description,
         avatar
     };
