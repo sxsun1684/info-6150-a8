@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create TV Show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Classical TV Show</h1>
+    <button onclick="location.href='index.html'">Back</button>
+</header>
+
+<main>
+    <form id="createForm">
+        <label>Title: <input name="title" required></label>
+        <label>Creator: <input name="creator" required></label>
+        <label>Year: <input type="number" name="year" required></label>
+        <label>Rating: <input type="number" name="rating" min="0" max="10" required></label>
+        <label>Director: <input name="director" required></label>
+        <label>Seasons: <input type="number" name="seasons" min="1" required></label>
+        <label>Main Actors:
+            <input name="actor" required placeholder="A,B,C">
+        </label>
+        <label>Description:
+            <textarea name="description" rows="3" placeholder="Short intro..." required></textarea>
+        </label>
+        <label>Image URL:
+            <input name="avatar" placeholder="https://example.com/image.jpg" required>
+        </label>
+
+        <button type="submit">Create TV shows</button>
+    </form>
+</main>
+<script src="config.js"></script>
+<script src="create.js"></script>
+</body>
+</html>
